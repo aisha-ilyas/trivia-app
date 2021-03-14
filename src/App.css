@@ -1,38 +1,101 @@
-.App {
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  color: antiquewhite;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 70vh;
+}
+.card {
+  background-color: #7fffd4;
+  color: rgb(19, 37, 31);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.start-page,
+.result-page {
+  flex-direction: column;
+}
+.question {
+  width: 60%;
+  text-align: left;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  padding-left: 1em;
+  margin-bottom: 0;
+}
+.options button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  margin-top: 0.5em;
+  font-size: 1.1em;
+  outline: none;
+}
+.options button:active,
+.options button:hover {
+  color: #d62839;
+  font-size: 1.2em;
+  outline: none;
+}
+.btn,
+input {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  outline: none;
+  padding: 7.5px;
+}
+.btn:hover,
+.btn:active {
   color: white;
+  background-color: black;
+  border-color: black;
+}
+.btn {
+  border-top-right-radius: 7.5px;
+  border-bottom-right-radius: 7.5px;
+}
+.result-btn {
+  border-radius: 7.5px;
+}
+input {
+  text-align: center;
+  border-top-left-radius: 7.5px;
+  border-bottom-left-radius: 7.5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 320px) and (max-width: 599px) {
+  .card {
+    flex-direction: column;
+    width: 85%;
   }
-  to {
-    transform: rotate(360deg);
+  .question {
+    text-align: center;
+    width: 100%;
+  }
+  .options {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+  }
+  .options button {
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 859px) {
+  .card {
+    width: 60%;
   }
 }
